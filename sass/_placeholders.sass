@@ -1,0 +1,71 @@
+// Main
+%border-box
+	box-sizing: border-box
+%main-border
+	border: 1px solid #fff
+%main-transition
+	transition: all .25s ease
+
+
+// Flex-box
+%flex-box
+	display: flex
+%valign-center
+	align-items: center
+%space-between
+	justify-content: space-between
+%space-around
+	justify-content: space-around
+%justify-center
+	justify-content: center
+%justify-left
+	justify-content: flex-start
+%direction-column
+	flex-direction: column
+%flex-wrap
+	flex-wrap: wrap
+
+
+// Menu
+%nulled-list
+	list-style-type: none
+	padding: 0
+	margin: 0
+%horiz-menu
+	@extend %flex-box
+	@extend %valign-center
+	padding: 0
+	margin: 0
+	list-style-type: none
+	li
+		padding: 0
+	a
+		&:hover
+			text-decoration: none
+
+
+// Text
+%ellipsis
+	display: block
+	text-overflow: ellipsis
+	white-space: nowrap
+	overflow: hidden
+
+
+// Blocks
+%clearfix
+	&:after
+		content: ''
+		visibility: hidden
+		height: 0
+		display: block
+		clear: both
+
+%pseudo-center
+	content: ''
+	position: absolute
+	top: 0
+	left: 0
+	margin-top: 50%
+	margin-left: 50%
+	transform: translate(-50%, -50%)

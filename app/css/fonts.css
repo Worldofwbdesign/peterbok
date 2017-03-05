@@ -3,3 +3,21 @@
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "RobotoMedium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "RobotoLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoLight/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "icon";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/icon/font/icon.eot?#iefix") format("embedded-opentype"), url("../fonts/icon/font/icon.woff2") format("woff2"), url("../fonts/icon/font/icon.woff") format("woff"), url("../fonts/icon/font/icon.ttf") format("truetype"), url("../fonts/icon/font/icon.svg#icon") format("svg"); }

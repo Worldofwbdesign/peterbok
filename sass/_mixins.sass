@@ -1,0 +1,9 @@
+=hover-effect($color, $text-decoration, $bg-color: "")
+	&:hover,
+	&:active,
+	&:focus,
+	&:active:focus
+		color: $color
+		text-decoration: $text-decoration
+		@if $bg-color != ""
+			background-color: $bg-color

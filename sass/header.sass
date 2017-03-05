@@ -1,13 +1,119 @@
 @import bourbon
-@import vars.sass
+@import vars
+@import placeholders
+@import mixins
 
+// Common styles
 body
-	font-size: 16px
-	min-width: 320px
 	position: relative
+	min-width: 320px
+	font-size: 18px
 	line-height: 1.6
-	font-family: "RobotoRegular", sans-serif
+	font-family: "RobotoMedium", sans-serif
+	background-color: $main-bg
 	overflow-x: hidden
-
+a
+	color: #333
+	+hover-effect(#333,none)
+img
+	max-width: 100%
 .hidden
 	display: none
+
+// Header
+.main-header
+	position: relative
+	height: 80px
+	background-color: $block-bg
+.main-logo
+	display: block
+	height: 80px
+	line-height: 80px
+	padding-left: 20px
+.main-nav
+	@extend %horiz-menu
+	@extend %justify-center
+	height: 80px
+	&__item
+		position: relative
+		flex-basis: 240px
+		height: 100%
+		margin: 0 2px
+		z-index: 5
+		@extend %main-transition
+		&:hover
+			.main-nav__link
+				color: #fff
+			.main-nav__bar
+				height: 100%
+	&__link
+		position: relative
+		@extend %flex-box
+		@extend %valign-center
+		@extend %justify-center
+		width: 100%
+		height: 100%
+		font-size: 0.88889em
+		text-align: center
+		text-transform: uppercase
+		@extend %main-transition
+	&__bar
+		content: ''
+		position: absolute
+		display: block
+		bottom: 0
+		width: 100%
+		height: 7px
+		z-index: -1
+		@extend %main-transition
+		&_marketing
+			background-color: $marketing
+		&_effect
+			background-color: $effect
+		&_books
+			background-color: $books
+
+.soc-panel
+	position: relative
+	@extend %nulled-list
+	padding: 20px 65px 0 0
+	text-align: right
+	&__item
+		display: inline-block
+		margin-right: 10px
+		font-size: 25px
+		@extend %main-transition
+		&:hover
+			opacity: .8
+		.fa-telegram
+			margin-left: -4px
+
+.toggle-search
+	position: absolute
+	width: 80px
+	height: 80px
+	right: 0
+	top: 0
+	line-height: 76px
+	text-align: center
+	cursor: pointer
+	z-index: 2
+	@extend %main-transition
+	&.active,
+	&:hover
+		color: #fff
+		.toggle-search__bar
+			height: 100%
+	&__bar
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 7px
+		background-color: $text-color
+		@extend %main-transition
+		z-index: -1
+	.fa
+		font-size: 25px
+
+

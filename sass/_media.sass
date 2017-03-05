@@ -1,20 +1,62 @@
 @import bourbon
+@import placeholders
 
 /*==========  Desktop First Method  ==========*/
 
+@media only screen and (min-width: 992px) and (max-width : 1560px)
+	.main-header
+		.col-md-8, .col-md-2
+			width: 33.3333%
+		.col-md-pull-2
+			left: -33.3333333333%
+		.col-md-push-8
+			left: 33.333333333%
+	.main-nav__link
+		font-size: .7em
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.search-form
+		min-width: 80%
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
-
+	.main-nav-wrapp
+		position: absolute
+		top: -80px
+		right: -6px
+		margin-right: -280px
+		&.active
+			margin-right: 0
+	.main-nav
+		display: block
+		height: auto
+		padding-left: 80px
+		&__item
+			display: block
+			color: #fff
+			margin: 0
+			&_marketing
+				background-color: $marketing
+			&_effect
+				background-color: $effect
+			&_books
+				background-color: $books
+		&__link
+			color: #fff
+			width: 280px
+			padding: 10px 15px
+		&__bar
+			display: none
+	.soc-panel
+		padding-right: 149px
+	.toggle-search
+		right: 84px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -35,12 +77,59 @@
 		-o-animation: none !important
 		-ms-animation: none !important
 		animation: none !important
+	.main-logo
+		max-width: 200px
+		padding-left: 0
+	.soc-panel
+		padding-top: 25px
+		&__item
+			font-size: 20px
 
+
+@media only screen and (max-width : 650px)
+	.soc-panel
+		&__item:nth-child(n+3)
+			display: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.search-wrapp
+		padding: 0 15px
+		.fa-close
+			top: 15px
+			right: 10px
+	.radio-cat
+		margin: 20px auto 0
+		width: 90%
+		&__label
+			display: block
+			width: 100%
+			margin-bottom: 15px
+			text-align: left
+	.main-nav-wrapp
+		top: -60px
+	.main-header
+		height: 60px
+	.toggle-mnu
+		width: 60px
+		height: 60px
+	.toggle-search
+		right: 64px
+		width: 60px
+		height: 60px
+		line-height: 58px
+	.mobile-mnu
+		width: 30px
+	.main-logo
+		height: 60px
+		line-height: 60px
+	.soc-panel
+		padding-top: 15px
+		padding-right: 115px
 
+@media only screen and (max-width : 400px)
+	.soc-panel
+		display: none
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -66,7 +155,8 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	/**/
+	.toggle-mnu
+		display: none
 
 
 /* Large Devices, Wide Screens */

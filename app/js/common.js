@@ -6,25 +6,6 @@ $(function() {
 			return $(this).attr("src").replace(".svg", ".png");
 		});
 	};
-
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
-
 	//Chrome Smooth Scroll
 	try {
 		$.browserSelector();
@@ -36,5 +17,21 @@ $(function() {
 	};
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+
+	// Search toggle
+	$('.toggle-search').click(function() {
+		$(this).toggleClass('active');
+		$('.search-wrapp').slideToggle();
+	});
+	$('.search-panel .fa-close').click(function(){
+		$('.search-wrapp').slideUp();
+		$('.toggle-search').removeClass('active');
+	})
+
+	// Mobile menu
+	$('.toggle-mnu').click(function(){
+		$(this).toggleClass('active');
+		$('.main-nav-wrapp').toggleClass('active');
+	})
 
 });
