@@ -34,4 +34,13 @@ $(function() {
 		$('.main-nav-wrapp').toggleClass('active');
 	})
 
+	// Massonry grid
+	$('.masonry-wrapp').masonry({
+		itemSelector: '.post',
+		gutter: '.gutter-sizer',
+		percentPosition: true,
+		fitWidth: true,
+		stagger: 30
+	});
+
 });

@@ -52,8 +52,24 @@ a {
 img {
   max-width: 100%; }
 
-.hidden {
-  display: none; }
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  font-weight: normal; }
+
+h1, .h1 {
+  font-family: 'RobotoCondensed', sans-serif;
+  font-size: 3.44444em;
+  line-height: .7em;
+  margin: 0; }
+  h1 span, .h1 span {
+    display: block;
+    font-family: 'RobotoMedium', sans-serif;
+    font-size: 23px;
+    padding-left: 3px; }
+
+.search-wrapp {
+  display: none;
+  background-color: #333; }
 
 .main-header {
   position: relative;
@@ -139,3 +155,60 @@ img {
     z-index: -1; }
   .toggle-search .fa {
     font-size: 25px; }
+
+.blog-header {
+  padding: 120px 0; }
+  .blog-header .h1 {
+    margin: -10px 0 40px; }
+
+.brand-logo {
+  width: 338px;
+  height: 338px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  -webkit-perspective: 900px;
+  perspective: 900px; }
+  .brand-logo__item {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-position: center center;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    -webkit-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+    transform-origin: 50% 0%; }
+    .brand-logo__item_front {
+      background-image: url(../img/brand_logo.svg); }
+    .brand-logo__item_back {
+      -webkit-transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+      transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+      background-image: url(../img/author.jpg);
+      opacity: 0; }
+
+.brand-logo__info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.brand-logo:hover .brand-logo__item_front {
+  -webkit-transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
+  transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
+  opacity: 0; }
+
+.brand-logo:hover .brand-logo__item_back {
+  -webkit-transform: rotate3d(1, 0, 0, 0deg);
+  transform: rotate3d(1, 0, 0, 0deg);
+  opacity: 1; }
+
+.header-descr {
+  font-family: 'RobotoLight', sans-serif;
+  font-size: 1.05em;
+  padding-right: 20%; }

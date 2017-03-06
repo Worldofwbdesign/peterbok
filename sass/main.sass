@@ -30,6 +30,10 @@ body textarea:required:valid
 input
 	outline: none
 
+h2,.h2
+	font-size: 1em
+	line-height: 1.3em
+
 // Mobile main menu
 .main-nav-wrapp
 	@extend %main-transition
@@ -90,11 +94,6 @@ input
 		top: -10px
 	&:after
 		bottom: -10px
-
-// Search panel
-.search-wrapp
-	display: none
-	background-color: #333
 .search-panel
 	@extend %flex-box
 	@extend %valign-center
@@ -172,6 +171,73 @@ input
 		left: 50%
 		top: 50%
 		transform: translate(-50%, -50%)
+
+// Main content
+.content-container
+	width: 1345px
+	margin: 0 auto
+	padding: 82px 0
+	background-color: #fff
+
+// Post
+.masonry-wrapp
+	width: 100%
+	max-width: 1170px
+	margin: 0 auto
+.gutter-sizer
+	width: 1.5%
+.post
+	width: 32.33333%
+	margin-bottom: 18px
+	border: 1px solid $grey
+	border-radius: 4px
+	.fa-quote
+		font-size: 36px
+	img
+		width: 100%
+	&_quote
+		padding-top: 18px
+		color: #fff
+	&_effect
+		background-color: $effect
+	&_marketing
+		background-color: $marketing
+	&_books
+		background-color: $books
+	&__content
+		padding: 12px 15px
+		text-align: center
+	&__info
+		text-align: left
+		font-size: .66667em
+		color: #d1d1d1
+		.fa
+			padding-right: 3px
+	&__views
+		padding-right: 10px
+	&__date
+		float: right
+	&__category
+		font-size: .72222em
+		text-transform: uppercase
+		&_effect
+			color: $effect
+		&_marketing
+			color: $marketing
+		&_books
+			color: $books
+		&_quote
+			display: inline-block
+			padding-top: 50px
+	&__time
+		font-size: .77778em
+		color: #acacac
+	&__quote
+		margin: 35px 0 5px
+		font-size: 1.2222em
+		line-height: 1.5em
+	&__author
+		font-size: .77778em
 
 
 

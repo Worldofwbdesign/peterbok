@@ -14,14 +14,29 @@
 	.main-nav__link
 		font-size: .7em
 
+@media only screen and (max-width : 1345px)
+	.content-container
+		width: 100%
+		padding: 18px 18px
+
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	.search-form
 		min-width: 80%
+	.blog-header
+		.h1
+			line-height: 1em
+	.header-descr
+		padding-right: 0
+	.masonry-wrapp
+		max-width: auto
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+
+	// Main menu
 	.main-nav-wrapp
 		position: absolute
 		top: -80px
@@ -54,6 +69,19 @@
 	.toggle-search
 		right: 84px
 
+	// Brand logo
+	.blog-header
+		padding: 80px 0
+	.brand-logo
+		width: 250px
+		height: 250px
+		margin: 0 auto 40px
+		&__item
+			background-size: cover
+	.post
+		width: 43%
+		margin-bottom: 0
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
@@ -85,6 +113,23 @@
 		&__item
 			font-size: 20px
 
+	.h1
+		font-size: 2.7em
+		line-height: .7em
+
+	// Brand logo
+	.blog-header
+		padding: 50px 0
+		.h1
+			margin-bottom: 25px
+	.brand-logo
+		width: 200px
+		height: 200px
+	.post
+		width: 45%
+		margin-bottom: 15px
+	.grid-gutter
+		width: 10%
 
 @media only screen and (max-width : 650px)
 	.soc-panel
@@ -93,6 +138,14 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.h1
+		text-align: center
+
+	// brand header
+
+	.header-descr
+		font-size: 16px
+
 	.search-wrapp
 		padding: 0 15px
 		.fa-close
@@ -126,6 +179,9 @@
 	.soc-panel
 		padding-top: 15px
 		padding-right: 115px
+
+	.post
+		width: 300px
 
 @media only screen and (max-width : 400px)
 	.soc-panel

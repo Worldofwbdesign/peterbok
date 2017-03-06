@@ -123,6 +123,10 @@ body textarea:required:valid {
 input {
   outline: none; }
 
+h2, .h2 {
+  font-size: 1em;
+  line-height: 1.3em; }
+
 .toggle-mnu {
   position: absolute;
   right: 0;
@@ -179,10 +183,6 @@ input {
     top: -10px; }
   .mobile-mnu:after {
     bottom: -10px; }
-
-.search-wrapp {
-  display: none;
-  background-color: #333; }
 
 .search-panel {
   height: 270px;
@@ -263,6 +263,74 @@ input {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
+.content-container {
+  width: 1345px;
+  margin: 0 auto;
+  padding: 82px 0;
+  background-color: #fff; }
+
+.masonry-wrapp {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto; }
+
+.gutter-sizer {
+  width: 1.5%; }
+
+.post {
+  width: 32.33333%;
+  margin-bottom: 18px;
+  border: 1px solid #aaacb2;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+  .post .fa-quote {
+    font-size: 36px; }
+  .post img {
+    width: 100%; }
+  .post_quote {
+    padding-top: 18px;
+    color: #fff; }
+  .post_effect {
+    background-color: #28dfbf; }
+  .post_marketing {
+    background-color: #f94f40; }
+  .post_books {
+    background-color: #a666cb; }
+  .post__content {
+    padding: 12px 15px;
+    text-align: center; }
+  .post__info {
+    text-align: left;
+    font-size: .66667em;
+    color: #d1d1d1; }
+    .post__info .fa {
+      padding-right: 3px; }
+  .post__views {
+    padding-right: 10px; }
+  .post__date {
+    float: right; }
+  .post__category {
+    font-size: .72222em;
+    text-transform: uppercase; }
+    .post__category_effect {
+      color: #28dfbf; }
+    .post__category_marketing {
+      color: #f94f40; }
+    .post__category_books {
+      color: #a666cb; }
+    .post__category_quote {
+      display: inline-block;
+      padding-top: 50px; }
+  .post__time {
+    font-size: .77778em;
+    color: #acacac; }
+  .post__quote {
+    margin: 35px 0 5px;
+    font-size: 1.2222em;
+    line-height: 1.5em; }
+  .post__author {
+    font-size: .77778em; }
+
 .main-nav-wrapp, .toggle-mnu, .toggle-mnu__bar, .mobile-mnu, .mobile-mnu:before, .mobile-mnu:after, .search-panel .fa-close, .search-form .fa-search {
   -webkit-transition: all .25s ease;
   transition: all .25s ease; }
@@ -296,10 +364,21 @@ input {
   .main-nav__link {
     font-size: .7em; } }
 
+@media only screen and (max-width: 1345px) {
+  .content-container {
+    width: 100%;
+    padding: 18px 18px; } }
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
   .search-form {
-    min-width: 80%; } }
+    min-width: 80%; }
+  .blog-header .h1 {
+    line-height: 1em; }
+  .header-descr {
+    padding-right: 0; }
+  .masonry-wrapp {
+    max-width: auto; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -333,7 +412,18 @@ input {
   .soc-panel {
     padding-right: 149px; }
   .toggle-search {
-    right: 84px; } }
+    right: 84px; }
+  .blog-header {
+    padding: 80px 0; }
+  .brand-logo {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 40px; }
+    .brand-logo__item {
+      background-size: cover; }
+  .post {
+    width: 43%;
+    margin-bottom: 0; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -355,7 +445,22 @@ input {
   .soc-panel {
     padding-top: 25px; }
     .soc-panel__item {
-      font-size: 20px; } }
+      font-size: 20px; }
+  .h1 {
+    font-size: 2.7em;
+    line-height: .7em; }
+  .blog-header {
+    padding: 50px 0; }
+    .blog-header .h1 {
+      margin-bottom: 25px; }
+  .brand-logo {
+    width: 200px;
+    height: 200px; }
+  .post {
+    width: 45%;
+    margin-bottom: 15px; }
+  .grid-gutter {
+    width: 10%; } }
 
 @media only screen and (max-width: 650px) {
   .soc-panel__item:nth-child(n+3) {
@@ -363,6 +468,10 @@ input {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .h1 {
+    text-align: center; }
+  .header-descr {
+    font-size: 16px; }
   .search-wrapp {
     padding: 0 15px; }
     .search-wrapp .fa-close {
@@ -395,7 +504,9 @@ input {
     line-height: 60px; }
   .soc-panel {
     padding-top: 15px;
-    padding-right: 115px; } }
+    padding-right: 115px; }
+  .post {
+    width: 300px; } }
 
 @media only screen and (max-width: 400px) {
   .soc-panel {
