@@ -109,8 +109,11 @@ h2,.h2
 			color: #fff
 .search-form
 	position: relative
-	min-width: 1065px
-	padding-right: 25px
+	&_header
+		min-width: 1065px
+		padding-right: 25px
+		.radio-cat
+			margin-right: -30px
 	&__input
 		width: 100%
 		padding: 5px 15px
@@ -134,7 +137,6 @@ h2,.h2
 .radio-cat
 	text-align: right
 	margin-top: 15px
-	margin-right: -30px
 	font-family: 'RobotoLight', sans-serif
 	font-size: 12px
 	&__label
@@ -178,23 +180,26 @@ h2,.h2
 	margin: 0 auto
 	padding: 82px 0
 	background-color: #fff
+	&_category
+		margin-top: 110px
 
 // Post
 .masonry-wrapp
+	position: relative
 	width: 100%
 	max-width: 1170px
 	margin: 0 auto
 .gutter-sizer
 	width: 1.5%
 .post
-	width: 32.33333%
-	margin-bottom: 18px
 	border: 1px solid $grey
 	border-radius: 4px
+	cursor: pointer
 	.fa-quote
 		font-size: 36px
 	img
 		width: 100%
+		max-width: 380px
 	&_quote
 		padding-top: 18px
 		color: #fff
@@ -220,12 +225,6 @@ h2,.h2
 	&__category
 		font-size: .72222em
 		text-transform: uppercase
-		&_effect
-			color: $effect
-		&_marketing
-			color: $marketing
-		&_books
-			color: $books
 		&_quote
 			display: inline-block
 			padding-top: 50px
@@ -238,6 +237,412 @@ h2,.h2
 		line-height: 1.5em
 	&__author
 		font-size: .77778em
+
+// Footer
+.main-footer
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	padding: 35px 0 10px
+	text-align: center
+	&__logo
+		max-width: 180px
+		margin: 0 auto
+	&__copyright
+		font-family: 'RobotoLight', sans-serif
+		font-size: 12px
+		color: #333
+		a
+			color: #333
+			font-family: 'RobotoMedium', sans-serif
+.soc-panel_footer
+	text-align: center
+	padding: 15px 0
+	.soc-panel__item
+		margin: 0 4px
+
+// 404
+.content-container_error
+	margin-top: 75px
+	padding: 45px 0
+.error-wrapp
+	max-width: 980px
+	min-height: 520px
+	padding: 0 40px
+	margin: 0 auto
+	background: url(../img/error.gif) no-repeat top center
+	background-size: cover
+
+.error-info
+	margin: 0 auto
+	color: #fff
+	&__square
+		float: left
+		padding: 75px 40px 45px
+		margin-top: -45px
+		font-size: 140px
+		line-height: 115px
+		background-color: $marketing
+	&__label
+		display: inline-block
+		height: 125px
+		margin-left: -7px
+		margin-top: 31px
+		padding: 0 45px
+		font-size: 37px
+		line-height: 110px
+		border: 7px solid $marketing
+
+.error-back
+	margin-top: 180px
+	display: inline-block
+	width: 100%
+	text-align: center
+	font-size: 19px
+	color: #fff
+	a
+		color: $marketing
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+
+.search-form_error
+	margin-top: 30px
+	color: #aaacb2
+	.search-form__input
+		padding-left: 0
+		padding-right: 0
+		font-size: 14px
+		color: #fff
+	.fa-search
+		top: -1px
+
+// Fullstory
+.content-container_single
+	padding: 0
+	margin: 110px auto 0
+.fullstory
+	padding-bottom: 170px
+.fullstory-header
+	position: relative
+	@extend %flex-box
+	color: #fff
+	background-color: $marketing
+	@extend %clearfix
+	&__img
+		width: 33.3333%
+		height: 100%
+		background-size: cover
+		img
+			width: 100%
+	&__descr
+		position: absolute
+		left: 33.3333%
+		top: 0
+		@extend %flex-box
+		flex-direction: column
+		@extend %space-between
+		height: 100%
+		padding: 30px
+	&__category
+		font-family: 'RobotoLight', sans-serif
+		font-size: 1.33333em
+	&__h1
+		font-size: 2.77778em
+		line-height: 1em
+	&__info
+		font-size: 1.11111em
+		font-family: 'RobotoLight', sans-serif
+	.fa
+		font-size: 18px
+		padding-right: 10px
+		&-eye
+			transform: translatey(-1px)
+	&__date
+		display: inline-block
+		margin-right: 40px
+	&__comments
+		display: inline-block
+		margin: 0 40px 0 10px
+
+.fullstory-content
+	padding: 170px 85px 0
+
+// Search page
+.content-container_search
+	margin-top: 65px
+	padding-top: 50px
+.search-header
+	&__title
+		display: inline-block
+		margin-bottom: 40px
+		padding-left: 115px
+		font-family: 'RobotoBold', sans-serif
+		font-size: 1.11111em
+		color: #000
+		&_noresult
+			display: block
+			padding-left: 0
+			text-align: center
+	&__terms
+		display: inline-block
+		margin-left: 20px
+		font-family: 'RobotoMedium', sans-serif
+		color: #999
+
+// Text editor styles
+.textwidget
+	color: #000
+	p
+		font-size: 1.1111em
+		font-family: 'RobotoLight', sans-serif
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+	img
+		height: auto !important
+.panel-first-child
+	.widget-title
+		margin-bottom: 20px
+		font-size: 2.22222em
+		text-align: center
+		line-height: 1.3em
+
+.quote.panel-widget-style
+	.textwidget
+		display: block
+		width: 100%
+		padding: 40px 20px
+		font-size: 1.44444em
+		line-height: 1.3em
+		font-family: 'RobotoBold', sans-serif
+		text-align: center
+		border: 7px solid #fff
+
+.widget-title + .textwidget
+	font-size: 1em
+	text-align: center
+	font-family: 'RobotoLight', sans-serif
+	line-height: 1.2em
+
+// Panel grid
+.panel-grid
+	color: #000
+	margin-bottom: 170px !important
+	strong
+		font-family: 'RobotoBold', sans-serif
+		font-weight: normal
+
+.video-responsive
+	position: relative
+	padding-bottom: 56.25%
+	height: 0
+	overflow:hidden
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+blockquote
+	margin: 0
+	padding-left: 40px
+	strong
+		color: #000
+		font-family: 'RobotoBold', sans-serif
+		font-weight: normal
+
+.sow-slider-pagination
+	display: none !important
+
+.sow-slide-nav
+	display: block !important
+	opacity: 1 !important
+
+.so-widget-sow-slider
+	.sow-slider-base
+		overflow: visible
+		.sow-slide-nav
+			width: 45px
+			height: 45px
+			line-height: 45px
+			top: auto
+			bottom: -63px
+			font-size: 20px
+			border: 1px solid #333
+			border-radius: 10em
+			@extend %main-transition
+			a
+				@extend %main-transition
+			&:hover
+				a
+					color: #fff
+			&.sow-slide-nav-prev
+				left: 41%
+			&.sow-slide-nav-next
+				right: 41%
+			.sow-sld-icon-thin-left
+				line-height: 43px
+				padding-right: 3px
+			.sow-sld-icon-thin-right
+				line-height: 43px
+				padding-left: 3px
+
+.sow-slider-count
+	position: absolute
+	text-align: center
+	bottom: -53px
+	left: 50%
+	font-size: 16px
+	color: #333
+	transform: translateX(-50%)
+
+// Readmore
+.readmore
+	&__h2
+		display: block
+		width: 100%
+		margin-bottom: 70px
+		text-align: center
+		font-family: 'RobotoBold', sans-serif
+		font-size: 2.2222em
+
+// Newsletter
+.newsletter-wrapp
+	max-width: 930px
+	margin: 0 auto
+	padding: 25px 0 35px
+	border: 1px solid #bcbbba
+	border-radius: 4px
+	text-align: center
+	.widget-title
+		font-size: 20px
+.wysija-paragraph
+	display: inline-block
+	position: relative
+	margin-left: 40px
+	&:first-child
+			margin-left: 0
+.widget_wysija_cont
+	.wysija-input,
+	.wysija-submit
+		width: 190px
+		height: 51px
+		padding: 0 30px
+		margin: 0
+		background-color: #f5f5f5
+		color: #333
+		font-size: 18px
+		border: none
+		border-radius: 10em
+*.wysija-input::-webkit-input-placeholder
+	color: #ccc
+	opacity: 1
+
+*.wysija-input:-moz-placeholder
+	color: #ccc
+	opacity: 1
+
+*.wysija-input::-moz-placeholder
+	color: #ccc
+	opacity: 1
+
+*.wysija-input:-ms-input-placeholder
+	color: #ccc
+	opacity: 1
+.widget_wysija
+	display: inline-block
+	.widget_wysija_cont
+		.wysija-submit
+			position: relative
+			display: inline-block
+			margin-left: 40px
+			color: #333
+			border-color: #333
+			border: 1px solid #fff
+			outline: none
+			z-index: 1
+			&:hover
+				background-color: #333
+				color: #fff
+				border-color: #333
+			&:focus
+				outline: none
+		.updated,
+		.login .message
+			background-color: #fff
+			border: none
+			font-size: 20px
+			text-align: center
+	.formError
+		top: -70px !important
+		left: 50% !important
+		transform: translateX(-50%)
+
+.wysija-submit
+	text-transform: uppercase
+	@extend %main-transition
+	&:before,
+	&:after
+		content: ''
+		z-index: -1
+		border-radius: inherit
+		pointer-events: none
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		-webkit-backface-visibility: hidden
+		transition: transform 0.3s, opacity 0.3s
+		transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1)
+	&:before
+		border: 1px solid #333
+		opacity: 0
+		-webkit-transform: scale3d(1.2, 1.2, 1)
+		transform: scale3d(1.2, 1.2, 1)
+
+.wysija-submit:hover::before
+	opacity: 1
+	transform: scale3d(1, 1, 1)
+.wysija-submit:hover::after
+	opacity: 0
+	-webkit-transform: scale3d(0.8, 0.8, 1)
+	transform: scale3d(0.8, 0.8, 1)
+
+// Telegram subscr
+.telegram-subscr
+	margin-top: 20px
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		width: 57px
+		height: 57px
+		margin-right: 15px
+		background-color: #333
+		text-align: center
+		color: #fff
+		border-radius: 10em
+		.fa
+			font-size: 28px
+			margin-top: 15px
+			margin-right: 2px
+	&__text
+		display: inline-block
+		vertical-align: middle
+		a
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+
+
+
 
 
 

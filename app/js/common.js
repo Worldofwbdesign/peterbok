@@ -34,13 +34,27 @@ $(function() {
 		$('.main-nav-wrapp').toggleClass('active');
 	})
 
-	// Massonry grid
-	$('.masonry-wrapp').masonry({
-		itemSelector: '.post',
-		gutter: '.gutter-sizer',
-		percentPosition: true,
-		fitWidth: true,
-		stagger: 30
-	});
+	function getPostWidth() {
+		if (window.innerWidth > 992)
+		{
+			return '32%'
+		} else if (window.innerWidth <= 992) {
+			return '48%';
+		}
+	}
+
+	if (window.innerWidth > 515) {
+		// Massonry grid
+		$('.masonry-wrapp').wookmark({
+			itemWidth: getPostWidth(),
+			flexibleWidth: getPostWidth(),
+			offset: 15,
+			autoResize: true
+		});
+	}
 
 });
+
+$(window).resize(function() {
+	$('.masonry-wrapp').trigger('refreshWookmark');
+})

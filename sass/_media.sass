@@ -17,7 +17,8 @@
 @media only screen and (max-width : 1345px)
 	.content-container
 		width: 100%
-		padding: 18px 18px
+		&_main
+			padding: 18px 18px
 
 
 /* Large Devices, Wide Screens */
@@ -31,8 +32,24 @@
 		padding-right: 0
 	.masonry-wrapp
 		max-width: auto
-
-
+	.so-widget-sow-slider .sow-slider-base .sow-slide-nav
+		&.sow-slide-nav-next
+			right: 25%
+		&.sow-slide-nav-prev
+			left: 25%
+	.panel-first-child
+		.widget-title
+			font-size: 1.4444em
+	.textwidget
+		p
+			span
+				strong
+					font-family: 'RobotoMedium', sans-serif
+					font-size: 24px
+			strong
+				span
+					font-family: 'RobotoMedium', sans-serif
+					font-size: 24px !important
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
@@ -52,22 +69,24 @@
 			display: block
 			color: #fff
 			margin: 0
-			&_marketing
-				background-color: $marketing
-			&_effect
-				background-color: $effect
-			&_books
-				background-color: $books
 		&__link
 			color: #fff
 			width: 280px
 			padding: 10px 15px
 		&__bar
 			display: none
-	.soc-panel
+	.soc-panel_header
 		padding-right: 149px
 	.toggle-search
 		right: 84px
+
+	.fullstory-header
+		&__descr
+			padding: 15px
+		&__h1
+			font-size: 2em
+		&__info
+			font-size: .8em
 
 	// Brand logo
 	.blog-header
@@ -78,9 +97,16 @@
 		margin: 0 auto 40px
 		&__item
 			background-size: cover
-	.post
-		width: 43%
-		margin-bottom: 0
+	.error-info
+		&__square
+			padding: 60px 40px 25px
+			font-size: 80px
+		&__label
+			height: 94px
+			padding: 0 30px
+			line-height: 75px
+	.fullstory-content
+		padding: 100px 15px 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -108,9 +134,9 @@
 	.main-logo
 		max-width: 200px
 		padding-left: 0
-	.soc-panel
+	.soc-panel_header
 		padding-top: 25px
-		&__item
+		.soc-panel__item
 			font-size: 20px
 
 	.h1
@@ -125,16 +151,60 @@
 	.brand-logo
 		width: 200px
 		height: 200px
-	.post
-		width: 45%
-		margin-bottom: 15px
 	.grid-gutter
 		width: 10%
+	.error-wrapp
+		padding: 0 15px 15px
+	.error-info
+		text-align: center
+		&__square
+			display: block
+			width: 280px
+			height: auto
+			padding: 20px
+			text-align: center
+			margin: -45px auto 0
+			float: none
+		&__label
+			height: auto
+			margin-top: 15px
+			margin-left: 0
+			font-size: 20px
+
+	.fullstory-header
+		display: block
+		&__h1
+			margin: 30px 0
+		&__img
+			width: 100%
+			max-width: 430px
+			margin: 0 auto
+			background-color: #fff
+		&__descr
+			display: block
+			position: relative
+			left: 0
+			text-align: center
+	.panel-grid
+		margin-bottom: 100px !important
+
+	.wysija-paragraph,
+	.widget_wysija .widget_wysija_cont .wysija-submit
+		display: block
+		margin: 20px auto 0
+
+	.telegram-subscr
+		margin-top: 40px
 
 @media only screen and (max-width : 650px)
-	.soc-panel
-		&__item:nth-child(n+3)
+	.soc-panel_header
+		.soc-panel__item:nth-child(n+3)
 			display: none
+
+@media only screen and (max-width : 530px)
+	.post
+		width: 375px
+		margin: 0 auto 15px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -176,15 +246,12 @@
 	.main-logo
 		height: 60px
 		line-height: 60px
-	.soc-panel
+	.soc-panel_header
 		padding-top: 15px
 		padding-right: 115px
 
-	.post
-		width: 300px
-
 @media only screen and (max-width : 400px)
-	.soc-panel
+	.soc-panel_header
 		display: none
 
 /* Custom, iPhone Retina */

@@ -37,6 +37,8 @@
 body {
   position: relative;
   min-width: 320px;
+  min-height: 100vh;
+  padding-bottom: 174px;
   font-size: 18px;
   line-height: 1.6;
   font-family: "RobotoMedium", sans-serif;
@@ -51,6 +53,9 @@ a {
 
 img {
   max-width: 100%; }
+
+.post__img {
+  max-width: 380px; }
 
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
@@ -92,9 +97,9 @@ h1, .h1 {
     height: 100%;
     margin: 0 2px;
     z-index: 5; }
-    .main-nav__item:hover .main-nav__link {
+    .main-nav__item_active .main-nav__link, .main-nav__item:hover .main-nav__link {
       color: #fff; }
-    .main-nav__item:hover .main-nav__bar {
+    .main-nav__item_active .main-nav__bar, .main-nav__item:hover .main-nav__bar {
       height: 100%; }
   .main-nav__link {
     position: relative;
@@ -189,6 +194,7 @@ h1, .h1 {
       -webkit-transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
       transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
       background-image: url(../img/author.jpg);
+      background-size: contain;
       opacity: 0; }
 
 .brand-logo__info {
